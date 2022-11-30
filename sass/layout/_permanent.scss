@@ -1,0 +1,48 @@
+  .perm_text {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 1.2;
+      text-align: center;
+      letter-spacing: 0.03em;
+      margin-bottom: 50px;
+  }
+
+  .perm_list {
+      display: flex;
+      padding: 0;
+      justify-content: space-between;
+  }
+
+  .perm_icons {
+      width: 170px;
+      height: 92px;
+      border: 1px solid #AFB1B8;
+      border-radius: 4px;
+      transition: border-color 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .perm_icons:hover {
+      border-color: var(--bluecolor);
+  }
+
+
+  .perm_icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+  }
+
+  .permanent_icon {
+      fill: var(--iconcolor);
+      transition: fill 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+
+  .perm_icons:hover .permanent_icon {
+      fill: var(--bluecolor);
+  }

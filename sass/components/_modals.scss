@@ -1,0 +1,239 @@
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity 500ms, visibility 500ms;
+}
+.modal {
+    width: 528px;
+    /* height: 581px; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    transition: transform 250ms cubic-bezier(0.49, 0.02, 0.23, 0.92);
+    background-color: #ffffff;
+    padding: 40px;
+}
+
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    cursor: pointer;
+    align-items: center;
+    background: var(--whitecolor);
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+    fill: var(--bluecolor);
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+.modal-icon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.par_txt {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.17;
+    letter-spacing: 0.06em;
+    color: var(--blackcolor);
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.span_name {
+    font-weight: 400;
+    text-align: start;
+    font-size: 12px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--graycolor);
+}
+
+.modal_forms {
+    margin-bottom: 10px;
+}
+
+.forms_input {
+    width: 448px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    /* margin-bottom: 10px; */
+    padding-left: 40px;
+}
+
+.forms_label {
+    position: relative;
+}
+
+.icon_form {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 15px;
+    top: 2px;
+}
+
+.forms_input:hover,
+.forms_input:focus,
+.commits:hover,
+.commits:focus {
+    border: 1px solid var(--bluecolor);
+    outline: none;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+.forms_input:focus+svg,
+.forms_input:hover+svg {
+    fill: var(--bluecolor);
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+.commits {
+    width: 448px;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    resize: none;
+    padding: 12px 16px;
+
+}
+
+.commitl {
+    margin-bottom: 20px;
+}
+
+textarea::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.71;
+    letter-spacing: 0.01em;
+    /* color: rgba(117, 117, 117, 0.5); */
+}
+
+/* .sogl_check {
+    display: flex;
+    align-items: center;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+} */
+.sogl_check {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.soglasie_link {
+    padding-left: 3px;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    color: var(--bluecolor);
+}
+
+.checkbox_icon {
+    display: flex;
+    width: 16px;
+    height: 15px;
+    border: 2px solid #212121;
+    border-radius: 4px;
+    margin-right: 9px;
+    cursor: pointer;
+}
+
+.sogl_check:checked+.checkbox_icon {
+    background-color: var(--bluecolor);
+    background-image: url(../img/Check.svg);
+    background-size: contain;
+    background-origin: content-box;
+    border: 2px solid transparent;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+
+}
+
+.modal_form_btn {
+    display: block;
+    margin: 30px auto 0;
+
+    font-family: inherit;
+    background: var(--bluecolor);
+
+    width: 200px;
+    height: 50px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+
+    cursor: pointer;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+.modal_form_btn:hover,
+.modal_form_btn:focus {
+    color: var(--whitecolor);
+    background-color: var(--activebutton);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+.modal_form_txt {
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: var(--whitecolor);
+}
+
+.agree {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    color: #757575;
+}
+
+.soglasie {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
