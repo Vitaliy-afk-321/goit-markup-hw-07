@@ -1,6 +1,6 @@
 .progect_list_b {
-    color: var(--blackcolor);
-    background-color: var(--buttoncolor);
+    color: $blackcolor;
+    background-color: $buttoncolor;
     cursor: pointer;
     font-weight: 500;
     font-size: 16px;
@@ -18,14 +18,14 @@
 .progect_list_b:hover,
 .progect_list_b:focus,
 .active-button {
-    color: var(--whitecolor);
-    background-color: var(--bluecolor);
+    color: $whitecolor;
+    background-color: $bluecolor;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .progect_list_bi {
-    color: var(--whitecolor);
-    background-color: var(--bluecolor);
+    color: $whitecolor;
+    background-color: $bluecolor;
     padding: 0;
     width: 216px;
     height: 50px;
@@ -48,8 +48,8 @@
 .progect_list_bi:hover,
 .progect_list_bi:focus,
 .active-button {
-    color: var(--whitecolor);
-    background-color: var(--activebutton);
+    color: $whitecolor;
+    background-color: $activebutton;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
 }

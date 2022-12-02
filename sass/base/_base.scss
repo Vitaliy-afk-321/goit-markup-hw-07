@@ -20,11 +20,11 @@ html {
 }
 
 .link.current {
-    color: var(--activebutton);
+    color: $activebutton;
 }
 
 body {
-    color: var(--maincolor);
+    color: $maincolor;
     font-family: 'Roboto', sans-serif;
 }
 

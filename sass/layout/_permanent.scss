@@ -16,14 +16,14 @@
   .perm_icons {
       width: 170px;
       height: 92px;
-      border: 1px solid #AFB1B8;
+      border: 1px solid $iconcolor;
       border-radius: 4px;
       transition: border-color 250ms;
       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .perm_icons:hover {
-      border-color: var(--bluecolor);
+      border-color: $bluecolor;
   }
 
 
@@ -37,12 +37,12 @@
   }
 
   .permanent_icon {
-      fill: var(--iconcolor);
+      fill: $iconcolor;
       transition: fill 250ms;
       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
 
   .perm_icons:hover .permanent_icon {
-      fill: var(--bluecolor);
+      fill: $bluecolor;
   }

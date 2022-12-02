@@ -27,7 +27,7 @@
 }
 
 .img_text {
-    border: 1px solid #EEEEEE;
+    border: 1px solid $imgcolor;
     border-top-style: none;
 }
 
@@ -46,7 +46,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    color: $whitecolor;
     font-size: 20px;
     padding-left: 24px;
     padding-right: 24px;
@@ -64,14 +64,14 @@
     font-size: 18px;
     line-height: 1.5;
     letter-spacing: 0.03em;
-    color: var(--whitecolor);
+    color: $whitecolor;
     transition: transform 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
 .img_h2 {
-    color: var(--maincolor);
+    color: $maincolor;
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
@@ -80,7 +80,7 @@
 }
 
 .img_p {
-    color: var(--graycolor);
+    color: $graycolor;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.9;
