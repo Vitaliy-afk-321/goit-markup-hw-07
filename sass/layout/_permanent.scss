@@ -18,15 +18,17 @@
       height: 92px;
       border: 1px solid $iconcolor;
       border-radius: 4px;
-      transition: border-color 250ms;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+     @extend %alltransition;
+     &:hover {
+        border-color: $bluecolor;
+     }
+     
+     &:hover .permanent_icon {
+        fill: $bluecolor;
+     }
   }
 
-  .perm_icons:hover {
-      border-color: $bluecolor;
-  }
-
-
+  
   .perm_icon {
       display: flex;
       justify-content: center;
@@ -40,9 +42,4 @@
       fill: $iconcolor;
       transition: fill 250ms;
       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-
-  .perm_icons:hover .permanent_icon {
-      fill: $bluecolor;
   }

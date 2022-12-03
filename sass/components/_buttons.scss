@@ -1,4 +1,5 @@
 .progect_list_b {
+    @extend %transition;
     color: $blackcolor;
     background-color: $buttoncolor;
     cursor: pointer;
@@ -10,20 +11,26 @@
     border-radius: 4px;
     border: none;
     font-family: inherit;
-    transition: color 250ms, background-color 250ms, box-shadow 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-
-.progect_list_b:hover,
-.progect_list_b:focus,
-.active-button {
+    &:hover {
     color: $whitecolor;
     background-color: $bluecolor;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    box-shadow:
+        0px 3px 1px rgba(0, 0, 0, 0.1),
+        0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+    &:focus {
+        color: $whitecolor;
+        background-color: $bluecolor;
+        box-shadow:
+                0px 3px 1px rgba(0, 0, 0, 0.1),
+                0px 1px 2px rgba(0, 0, 0, 0.08),
+                0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
 }
 
 .progect_list_bi {
+    @extend %transition;
     color: $whitecolor;
     background-color: $bluecolor;
     padding: 0;
@@ -35,33 +42,30 @@
     line-height: 1.87;
     letter-spacing: 0.06em;
     border-radius: 4px;
-
     border: none;
     font-family: inherit;
-
-    transition: color 250ms, background-color 250ms, box-shadow 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-}
-
-
-.progect_list_bi:hover,
-.progect_list_bi:focus,
-.active-button {
-    color: $whitecolor;
-    background-color: $activebutton;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
+    &:hover {
+        color: $whitecolor;
+        background-color: $activebutton;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+    }
+    &:focus {
+            color: $whitecolor;
+            background-color: $activebutton;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+            border-radius: 4px;
+    }
 }
 
 .progect_l {
     display: flex;
     justify-content: center;
     padding: 0;
-
     margin-bottom: 50px;
+    
+    .progect_list:not(:last-child) {
+            margin-right: 8px;
+        }
 }
 
-.progect_l .progect_list:not(:last-child) {
-    margin-right: 8px;
-}

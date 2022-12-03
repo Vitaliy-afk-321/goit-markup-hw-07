@@ -3,11 +3,11 @@
     padding: 0;
 }
 
-.benefits .benefits_item:not(:last-child) {
+.benefits_item:not(:last-child) {
     margin-right: 30px;
 }
 
-.benefits_item .icon-bcg {
+.icon-bcg {
     width: 270px;
     height: 120px;
     display: flex;
@@ -16,13 +16,6 @@
     background: $buttoncolor;
     border-radius: 4px;
     margin-bottom: 30px;
-}
-
-h2,
-h3,
-p {
-    margin-top: 0;
-    margin-bottom: 0;
 }
 
 .name_benef {

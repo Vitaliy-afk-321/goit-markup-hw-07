@@ -23,7 +23,7 @@
 
 .header_logo_web {
     color: $bluecolor;
-    font-family: 'Raleway';
+    font-family: $secondfont;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
@@ -33,7 +33,7 @@
 .header_logo,
 .footer_l {
     color: $blackcolor;
-    font-family: 'Raleway';
+    font-family: $secondfont;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
@@ -57,8 +57,14 @@
 .header_item_l {
     color: $blackcolor;
     padding: 32px 0;
-    transition: color 250ms, background-color 200ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
+    &:hover {
+            color: $bluecolor;
+        }
+    
+        &:focus {
+            color: $bluecolor;
+        }
 }
 
 .header_nav_l {
@@ -80,8 +86,13 @@
     padding: 32px 0;
     display: flex;
     justify-content: center;
-    transition: color 250ms, background-color 200ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
+    &:hover {
+    color: $bluecolor;
+    }
+    &:focus {
+    color: $bluecolor;
+    }
 }
 
 .header_nav_l_tel {
@@ -93,7 +104,14 @@
     padding: 32px 0;
     display: flex;
     justify-content: center;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %alltransition;
+    &:hover {
+            color: $bluecolor;
+        }
+    
+        &:focus {
+            color: $bluecolor;
+        }
 }
 
 .header_icon_mail,
@@ -110,20 +128,6 @@
     fill: $bluecolor;
 }
 
-
-
-.header_nav_l_link:hover,
-.header_nav_l_link:focus,
-.header_nav_l_tel:hover,
-.header_nav_l_tel:focus,
-.header_item_l:hover,
-.header_item_l:focus,
-.footer_list_adr:hover,
-.footer_list_adr:focus,
-.footer_list_mail:hover,
-.footer_list_mail:focus,
-.footer_list_tel:hover,
-.footer_list_tel:focus,
 .active-link {
     color: $bluecolor;
 }

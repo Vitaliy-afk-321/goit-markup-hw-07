@@ -11,47 +11,59 @@
 
 .footer_list_adr {
     color: $whitecolor;
-    font-family: 'Roboto';
+    font-family: $mainfont;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.7;
     letter-spacing: 0.03em;
-    transition: color 250ms, border-color 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
+    &:hover {
+            color: $bluecolor;
+        }
+    
+        &:focus {
+            color: $bluecolor;
+        }
 }
 
 .footer_list_item {
     padding: 0;
     margin-bottom: 9px;
+    &:nth-last-child(1) {
+        margin-bottom: 0;
+    }
 }
 
 .footer_list_mail,
 .footer_list_tel {
-    font-family: 'Roboto';
+    font-family: $mainfont;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.7;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
-    transition: color 250ms, border-color 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
+    &:hover {
+            color: $bluecolor;
+        }
+    
+        &:focus {
+            color: $bluecolor;
+        }
 }
 
 .footer_list {
     padding-left: 0;
 }
 
-.footer_list_item:nth-last-child(1) {
-    margin-bottom: 0;
-}
-
 .footer_div {
     display: flex;
     align-items: baseline;
 }
-.joinus_text, .title_s {
+.joinus_text, 
+.title_s {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -66,13 +78,15 @@
 .joinus_list {
     padding: 0;
 }
-.joinus-item:nth-last-child(1) {
-    margin-right: 0;
-}
+
 .joinus_social_list {
     padding: 0;
     display: flex;
     justify-content: center;
+    
+    .links-icon-f {
+            fill: $whitecolor;
+        }
 }
 .joinus-item {
     width: 44px;
@@ -81,8 +95,13 @@
     padding-bottom: 0;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
-    transition: color 250ms, background-color 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
+    &:hover {
+    background-color: $bluecolor;
+    }
+    &:nth-last-child(1) {
+        margin-right: 0;
+    }
 }
 .joinus_icons {
     width: 100%;
@@ -90,12 +109,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.joinus_social_list .links-icon-f {
-   fill: $whitecolor;
-}
-.joinus-item:hover {
-    background-color: $bluecolor;
 }
 
 .footer_div {
@@ -122,10 +135,6 @@
     padding: 0;
 }
 
-.joinus-item:nth-last-child(1) {
-    margin-right: 0;
-}
-
 .joinus_social_list {
     padding: 0;
     display: flex;
@@ -139,8 +148,14 @@
     padding-bottom: 0;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
-    transition: color 250ms, background-color 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
+    &:hover {
+    background-color: $bluecolor;
+    }
+    &:nth-last-child(1) {
+        margin-right: 0;
+    }
+
 }
 
 .joinus_icons {
@@ -149,14 +164,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.joinus_social_list .links-icon-f {
-    fill: $whitecolor;
-}
-
-.joinus-item:hover {
-    background-color: $bluecolor;
 }
 
 /* Subscribe */
@@ -191,7 +198,7 @@
 .email_input {
     width: 358px;
     height: 50px;
-    font-family: 'Roboto';
+    font-family: $mainfont;
     font-weight: 400;
     font-size: 16px;
     letter-spacing: 0.03em;
@@ -212,7 +219,7 @@
         0px 4px 4px rgba(0, 0, 0, 0.06),
         1px 4px 6px rgba(0, 0, 0, 0.16);
     outline: none;
-    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1)
+    @extend %alltransition;
 }
 
 .subbutton {
@@ -230,7 +237,7 @@
     border-radius: 4px;
 
     cursor: pointer;
-    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %alltransition;
 
 
     font-weight: 700;
@@ -240,6 +247,20 @@
     color: $whitecolor;
     justify-content: center;
     align-items: center;
+    &:hover {
+    color: $whitecolor;
+    background-color: $activebutton;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    @extend %alltransition;
+    }
+    &:focus {
+    color: $whitecolor;
+    background-color: $activebutton;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    @extend %alltransition;
+    }
 }
 
 .links-icon-send {
@@ -247,14 +268,6 @@
     margin-left: 10px;
 }
 
-.subbutton:hover,
-.subbutton:focus {
-    color: $whitecolor;
-    background-color: $activebutton;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1)
-}
 
 .text_sub_s {
     font-weight: 700;

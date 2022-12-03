@@ -10,7 +10,6 @@
 }
 .modal {
     width: 528px;
-    /* height: 581px; */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -39,12 +38,14 @@
     height: 30px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-}
-
-.modal-btn:hover,
-.modal-btn:focus {
-    fill: $bluecolor;
-    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1)
+    &:hover {
+        fill: $bluecolor;
+        @extend %alltransition;
+    }
+    &:focus {
+        fill: $bluecolor;
+        @extend %alltransition;
+    }
 }
 
 .modal-icon {
@@ -84,6 +85,25 @@
     border-radius: 4px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     padding-left: 40px;
+    &:hover {
+    border: 1px solid $bluecolor;
+    outline: none;
+    @extend %alltransition;
+    }
+    &:focus {
+     border: 1px solid $bluecolor;
+    outline: none;
+    @extend %alltransition;
+    }
+
+    &+svg:hover {
+    fill: $bluecolor;
+    @extend %alltransition;
+    }
+    &+svg:focus {
+    fill: $bluecolor;
+    @extend %alltransition;
+    }
 }
 
 .forms_label {
@@ -97,22 +117,6 @@
     left: 15px;
     top: 2px;
 }
-
-.forms_input:hover,
-.forms_input:focus,
-.commits:hover,
-.commits:focus {
-    border: 1px solid $bluecolor;
-    outline: none;
-    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1)
-}
-
-.forms_input:focus+svg,
-.forms_input:hover+svg {
-    fill: $bluecolor;
-    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1)
-}
-
 .commits {
     width: 448px;
     height: 120px;
@@ -121,6 +125,17 @@
     border-radius: 4px;
     resize: none;
     padding: 12px 16px;
+    &:hover {
+            border: 1px solid $bluecolor;
+            outline: none;
+            @extend %alltransition;
+        }
+    
+        &:focus {
+            border: 1px solid $bluecolor;
+            outline: none;
+            @extend %alltransition;
+        }
 
 }
 
@@ -191,17 +206,25 @@ textarea::placeholder {
     border-radius: 4px;
 
     cursor: pointer;
-    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1)
+    @extend %alltransition;
+    
+    &:hover {
+        color: $whitecolor;
+            background-color: $activebutton;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+            border-radius: 4px;
+            @extend %alltransition
+    }
+    &:focus {
+        color: $whitecolor;
+            background-color: $activebutton;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+            border-radius: 4px;
+            @extend %alltransition
+    }
+
 }
 
-.modal_form_btn:hover,
-.modal_form_btn:focus {
-    color: $whitecolor;
-    background-color: $activebutton;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1)
-}
 
 .modal_form_txt {
     cursor: pointer;
