@@ -71,15 +71,15 @@
 54. footer = without class
 55. footer_div = footer
 56. container_main = container-hero
-57. footer_list_adress = list-footer
-58. footer_l = logo-navigation
+57. footer_list_adress = list-footer__adress
+58. footer_l = logo-footer
 59. header_logo_web = logo-navigation__text
 60. footer_a = adress
 61. footer_list = list-adress
 62. footer_list_item = list-adress__item
 63. footer_list_adr  = list-adress__link
 64. footer_list_mail = list-adress__mail
-65. footer_list_tel  = list-adress__mail
+65. footer_list_tel  = list-adress__phone
 
 
 
@@ -123,6 +123,8 @@ portfolio
 96. img_h2 = list-cards__title
 97. img_p = list-cards__description
  
+
+https://tproger.ru/translations/useful-hotkeys-for-vs-code/
 
 
  
