@@ -1110,12 +1110,9 @@ textarea::placeholder {
 .list-cards:nth-child(3n) {
   margin-right: 0;
 }
-.list-cards:hover {
-  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
 
 .list-cards__link {
+  display: block;
   -webkit-transition: color 250ms, background-color 250ms, -webkit-box-shadow 250ms;
   transition: color 250ms, background-color 250ms, -webkit-box-shadow 250ms;
   transition: color 250ms, background-color 250ms, box-shadow 250ms;
@@ -1126,6 +1123,10 @@ textarea::placeholder {
 .list-cards__link:hover .list-cards__description--hidden {
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+.list-cards__link:hover {
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .list-cards__link--hidden {
