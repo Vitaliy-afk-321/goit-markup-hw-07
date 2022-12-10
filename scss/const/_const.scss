@@ -23,6 +23,10 @@ html {
     color: $activebutton;
 }
 
+.link.current {
+    color: $activebutton;
+}
+
 body {
     color: $maincolor;
     font-family: $mainfont;

@@ -8,3 +8,8 @@
     padding-top: 94px;
     padding-bottom: 94px;
 }
+
+@mixin trans($time: 250ms, $type: cubic-bezier(0.4, 0, 0.2, 1)) {
+    transition-duration: $time;
+    transition-timing-function: $type;
+}

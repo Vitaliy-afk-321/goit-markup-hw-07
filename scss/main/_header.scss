@@ -62,7 +62,8 @@ header {
 &:hover,
 &:focus {
             color: $bluecolor;
-            transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            @include trans;
+            transition-property: color;
         }
 }
 
@@ -124,14 +125,19 @@ header {
 }
 
 
+.list-adress__link {
+    &:hover, &:focus {
+        color: $bluecolor;
+        @include trans;
+        transition-property: color;
+    }
+}
 
 
 
 
 
 
-.list-adress__link:hover,
-.list-adress__link:focus,
 .active-link {
     color: $bluecolor;
 }
@@ -151,5 +157,4 @@ header {
     border-radius: 2px;
     top: 45px;
     left: 0;
-
 }
