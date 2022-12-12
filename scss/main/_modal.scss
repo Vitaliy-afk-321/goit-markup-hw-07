@@ -40,10 +40,11 @@
     height: 30px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-
+    @include transition(background-color);
+    
     &:hover {
     fill: $bluecolor;
-    @include transition(background-color);
+    @include transition(fill);
     }
 }
 
